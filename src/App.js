@@ -2,18 +2,18 @@
 import { useState } from 'react';
 import './App.css';
 import Alret from './components/Alret';
-import About from './components/About';
+//import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm  from './components/TextForm';
 import './s.css';
 
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import React from "react";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 
@@ -113,21 +113,22 @@ function App() {
  return (
     <>
     <body style={body_bcolor}> 
-    <Router>
+    {/* <Router> */}
       <Navbar mode={mode} orangeBackground={orangeBackground}   faintGreen={faintGreen} gray= {gray}  yellowbackground={yellowbackground} toggleMode={toggleMode} lightblue={lightblue} info="ABOUT US" name='TEXTUTILS'/>
       <Alret alert={alert}> </Alret> 
-      <div className='container my-3'>  
+      <div className='container my-3'> 
+      <TextForm  mode={mode} showAlert={showAlert} heading="Enter text to analyse"/> 
     
-          <Routes>
+          {/* <Routes> */}
             {/* users/ --> component 1
             users/Home/ --component 2 */}
        
-            <Route exact path="/about" element={ <About />} />
+            {/* <Route exact path="/about" element={ <About />} />
             <Route exact path="/" element={ <TextForm  mode={mode} showAlert={showAlert} heading="Enter text to analyse"/> } />
-          </Routes>
+          </Routes> */}
       </div>
       
-    </Router>
+    {/* </Router> */}
     </body>
 </>
 );
